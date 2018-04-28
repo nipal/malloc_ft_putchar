@@ -37,7 +37,7 @@ static	inline	unsigned	char	alpha_val(char c)
 {
 //	static	const	char	ref[17] = ""
 //	int			id;
-	return (((c >= '0' && c <= '9') ? (c - '0') : ((c >= 'a' && c <= 'f') ? (c - 'a') : ((c >= 'A' && c <= 'F') ? (c - 'A'): 0))));
+	return (((c >= '0' && c <= '9') ? (c - '0') : ((c >= 'a' && c <= 'f') ? (c - 'a' + 10) : ((c >= 'A' && c <= 'F') ? (c - 'A' + 10): 0))));
 	
 }
 
@@ -60,9 +60,17 @@ void	atohs(unsigned char *hexa, char *data)
 	
 }
 
+//void	print_err_byte(unsigned char *data, size_t len)
+//{
+//	size_t	i;
+//
+//	i = 0;
+//	while
+//}
+
 int	main()
 {
-	void			(*func)(char c);
+	void			(*func)(char *s);
 	char			*data;
 	unsigned	char	*hexa;
 	size_t	size, ret;
@@ -77,9 +85,12 @@ int	main()
 		atohs(hexa, data);
 	//	strcpy(data, "coucou, ca va?");
 		printf("input{%1$p}	:%1$s\n", data);
-		dprintf(2, "instruct{%1$p}	:%1$s\n", hexa);
+		write(2, hexa, size);
+//		dprintf(2, "instruct{%1$p}	:%1$s\n", hexa);
 		func = hexa;
-		func('$');
+		char buff[50];
+		func(buff);
+		printf(">>> %s <<<\n", buff);
 	}
 	else
 	{
