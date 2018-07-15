@@ -1,0 +1,34 @@
+_ft_putchar:  ## from the executable ##
+100000f20:	55 				pushq	%rbp
+100000f21:	48 89 e5 		movq	%rsp, %rbp
+100000f24:	48 83 ec 10 	subq	$16, %rsp
+100000f28:	40 88 f8 		movb	%dil, %al
+100000f2b:	bf 01 00 00 00 	movl	$1, %edi
+100000f30:	48 8d 75 ff 	leaq	-1(%rbp), %rsi
+100000f34:	b9 01 00 00 00 	movl	$1, %ecx
+100000f39:	89 ca 			movl	%ecx, %edx
+100000f3b:	88 45 ff 		movb	%al, -1(%rbp)
+100000f3e:	e8 4d 00 00 00 	callq	77
+100000f43:	48 89 45 f0 	movq	%rax, -16(%rbp)
+100000f47:	48 83 c4 10 	addq	$16, %rsp
+100000f4b:	5d 				popq	%rbp
+100000f4c:	c3 				retq
+100000f4d:	90 				nop
+100000f4e:	90 				nop
+100000f4f:	90 				nop
+
+_ft_putchar:  ## from the .o file ##
+       0:	55 				pushq	%rbp
+       1:	48 89 e5 		movq	%rsp, %rbp
+       4:	48 83 ec 10 	subq	$16, %rsp
+       8:	40 88 f8 		movb	%dil, %al
+       b:	bf 01 00 00 00 	movl	$1, %edi
+      10:	48 8d 75 ff 	leaq	-1(%rbp), %rsi
+      14:	b9 01 00 00 00 	movl	$1, %ecx
+      19:	89 ca 			movl	%ecx, %edx
+      1b:	88 45 ff 		movb	%al, -1(%rbp)
+      1e:	e8 00 00 00 00 	callq	0 <_ft_putchar+0x23>
+      23:	48 89 45 f0 	movq	%rax, -16(%rbp)
+      27:	48 83 c4 10 	addq	$16, %rsp
+      2b:	5d 				popq	%rbp
+      2c:	c3 				retq

@@ -1,0 +1,86 @@
+
+a.out:	file format Mach-O 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+__text:
+100000f20:	55 	pushq	%rbp
+100000f21:	48 89 e5 	movq	%rsp, %rbp
+100000f24:	48 83 ec 10 	subq	$16, %rsp
+100000f28:	40 88 f8 	movb	%dil, %al
+100000f2b:	bf 01 00 00 00 	movl	$1, %edi
+100000f30:	48 8d 75 ff 	leaq	-1(%rbp), %rsi
+100000f34:	b9 01 00 00 00 	movl	$1, %ecx
+100000f39:	89 ca 	movl	%ecx, %edx
+100000f3b:	88 45 ff 	movb	%al, -1(%rbp)
+100000f3e:	e8 4d 00 00 00 	callq	77
+100000f43:	48 89 45 f0 	movq	%rax, -16(%rbp)
+100000f47:	48 83 c4 10 	addq	$16, %rsp
+100000f4b:	5d 	popq	%rbp
+100000f4c:	c3 	retq
+100000f4d:	90 	nop
+100000f4e:	90 	nop
+100000f4f:	90 	nop
+100000f50:	55 	pushq	%rbp
+100000f51:	48 89 e5 	movq	%rsp, %rbp
+100000f54:	48 83 ec 10 	subq	$16, %rsp
+100000f58:	bf 61 00 00 00 	movl	$97, %edi
+100000f5d:	c7 45 fc 00 00 00 00 	movl	$0, -4(%rbp)
+100000f64:	e8 b7 ff ff ff 	callq	-73 <_ft_putchar>
+100000f69:	bf 62 00 00 00 	movl	$98, %edi
+100000f6e:	e8 ad ff ff ff 	callq	-83 <_ft_putchar>
+100000f73:	bf 63 00 00 00 	movl	$99, %edi
+100000f78:	e8 a3 ff ff ff 	callq	-93 <_ft_putchar>
+100000f7d:	bf 0a 00 00 00 	movl	$10, %edi
+100000f82:	e8 99 ff ff ff 	callq	-103 <_ft_putchar>
+100000f87:	31 c0 	xorl	%eax, %eax
+100000f89:	48 83 c4 10 	addq	$16, %rsp
+100000f8d:	5d 	popq	%rbp
+100000f8e:	c3 	retq
+
+_ft_putchar:
+100000f20:	55 	pushq	%rbp
+100000f21:	48 89 e5 	movq	%rsp, %rbp
+100000f24:	48 83 ec 10 	subq	$16, %rsp
+100000f28:	40 88 f8 	movb	%dil, %al
+100000f2b:	bf 01 00 00 00 	movl	$1, %edi
+100000f30:	48 8d 75 ff 	leaq	-1(%rbp), %rsi
+100000f34:	b9 01 00 00 00 	movl	$1, %ecx
+100000f39:	89 ca 	movl	%ecx, %edx
+100000f3b:	88 45 ff 	movb	%al, -1(%rbp)
+100000f3e:	e8 4d 00 00 00 	callq	77
+100000f43:	48 89 45 f0 	movq	%rax, -16(%rbp)
+100000f47:	48 83 c4 10 	addq	$16, %rsp
+100000f4b:	5d 	popq	%rbp
+100000f4c:	c3 	retq
+100000f4d:	90 	nop
+100000f4e:	90 	nop
+100000f4f:	90 	nop
+
+_main:
+100000f50:	55 	pushq	%rbp
+100000f51:	48 89 e5 	movq	%rsp, %rbp
+100000f54:	48 83 ec 10 	subq	$16, %rsp
+100000f58:	bf 61 00 00 00 	movl	$97, %edi
+100000f5d:	c7 45 fc 00 00 00 00 	movl	$0, -4(%rbp)
+100000f64:	e8 b7 ff ff ff 	callq	-73 <_ft_putchar>
+100000f69:	bf 62 00 00 00 	movl	$98, %edi
+100000f6e:	e8 ad ff ff ff 	callq	-83 <_ft_putchar>
+100000f73:	bf 63 00 00 00 	movl	$99, %edi
+100000f78:	e8 a3 ff ff ff 	callq	-93 <_ft_putchar>
+100000f7d:	bf 0a 00 00 00 	movl	$10, %edi
+100000f82:	e8 99 ff ff ff 	callq	-103 <_ft_putchar>
+100000f87:	31 c0 	xorl	%eax, %eax
+100000f89:	48 83 c4 10 	addq	$16, %rsp
+100000f8d:	5d 	popq	%rbp
+100000f8e:	c3 	retq
+Disassembly of section __TEXT,__stubs:
+__stubs:
+100000f90:	ff 25 7a 00 00 00 	jmpq	*122(%rip)
+Disassembly of section __TEXT,__stub_helper:
+__stub_helper:
+100000f98:	4c 8d 1d 69 00 00 00 	leaq	105(%rip), %r11
+100000f9f:	41 53 	pushq	%r11
+100000fa1:	ff 25 59 00 00 00 	jmpq	*89(%rip)
+100000fa7:	90 	nop
+100000fa8:	68 00 00 00 00 	pushq	$0
+100000fad:	e9 e6 ff ff ff 	jmp	-26 <__stub_helper>

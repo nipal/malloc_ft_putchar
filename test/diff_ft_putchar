@@ -1,0 +1,8 @@
+10c10
+< e8 4d 00 00 00 	callq	77
+---
+> e8 00 00 00 00 	callq	0 <_ft_putchar+0x23>
+15,17d14
+< 90 				nop
+< 90 				nop
+< 90 				nop

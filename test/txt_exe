@@ -1,0 +1,17 @@
+55 				pushq	%rbp
+48 89 e5 		movq	%rsp, %rbp
+48 83 ec 10 	subq	$16, %rsp
+40 88 f8 		movb	%dil, %al
+bf 01 00 00 00 	movl	$1, %edi
+48 8d 75 ff 	leaq	-1(%rbp), %rsi
+b9 01 00 00 00 	movl	$1, %ecx
+89 ca 			movl	%ecx, %edx
+88 45 ff 		movb	%al, -1(%rbp)
+e8 4d 00 00 00 	callq	77
+48 89 45 f0 	movq	%rax, -16(%rbp)
+48 83 c4 10 	addq	$16, %rsp
+5d 				popq	%rbp
+c3 				retq
+90 				nop
+90 				nop
+90 				nop
